@@ -1,7 +1,7 @@
 {
   "name": "Mobile01 Photoer",
   "description": "保留 Mobile01 文章的圖片，並刪去文字說明",
-  "version": "2.0",
+  "version": "2.1",
   "permissions": [
     "activeTab"
   ],
