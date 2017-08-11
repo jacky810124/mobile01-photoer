@@ -62,11 +62,13 @@ function main() {
    */
   function clearTopic() {
     const post = document.querySelector('.forum-content article .single-post-content')
-    const imgs = document.querySelector('.forum-content article .single-post-content').querySelectorAll('img')
+    const imgs = Array.prototype.filter.call(document.querySelector('.forum-content article .single-post-content').querySelectorAll('img'), el => !/mobile01.com\/image/.test(el.src))
 
     post.innerHTML = ''
 
-    Array.prototype.forEach.call(imgs, el => post.append(el))
+    imgs.forEach(el => post.append(el))
+
+    // Array.prototype.forEach.call(imgs, el => post.append(el))
     // [...imgs].forEach(el => post.append(el))
   }
 
