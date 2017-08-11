@@ -61,8 +61,8 @@ function main() {
    * clear first user topic description
    */
   function clearTopic() {
-    const post = document.querySelector('.forum-content article')
-    const imgs = document.querySelector('.forum-content article').querySelectorAll('img')
+    const post = document.querySelector('.forum-content article .single-post-content')
+    const imgs = document.querySelector('.forum-content article .single-post-content').querySelectorAll('img')
 
     post.innerHTML = ''
 
@@ -76,7 +76,7 @@ function main() {
     } else if (isTopic) {
       clearTopic()
     } else {
-      sendNotify('Mobile01 Photoer 目前僅支援小惡魔新聞台與使用者討論串')
+      sendNotify('Mobile01 Photoer 目前僅支援小惡魔新聞台與使用者討論串（原 PO 的文章）')
     }
   } else {
     sendNotify('Mobile01 Photoer 目前僅支援 mobile01.com')
